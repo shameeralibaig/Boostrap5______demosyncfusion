@@ -1,0 +1,176 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Essential JS 2 :Tooltip</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <link href="styles/bootstrap5-base.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap5-button.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap5.css" rel="stylesheet" type="text/css" />    
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    </title>
+</head>
+
+<body style="background-color:#212529;">
+    <div class="layout">
+        <b>Sticky Bottom </b>
+        <!-- Tooltip element -->
+        <button id="bottomTooltip">Show Tooltip</button>
+    </div>
+    <div class="layout">
+        <b>Sticky Top </b>
+        <!-- Tooltip element -->
+        <button id="topTooltip">Show Tooltip</button>
+    </div>
+
+    <div class="layout">
+        <b>Sticky Left</b>
+        <!-- Tooltip element -->
+        <button id="leftTooltip">Show Tooltip</button>
+    </div>
+
+    <div class="layout">
+        <b>Sticky Right</b>
+        <!-- Tooltip element -->
+        <button id="rightTooltip">Show Tooltip</button>
+    </div>
+   
+
+    <div class="layout">
+        <b>Bottom Tooltip</b>
+        <!-- Tooltip element -->
+        <button id="nbottomTooltip">Show Tooltip</button>
+    </div>
+    <div class="layout">
+        <b>Top Tooltip</b>
+        <!-- Tooltip element -->
+        <button id="ntopTooltip">Show Tooltip</button>
+    </div>
+
+    <div class="layout">
+        <b>Left Tooltip</b>
+        <!-- Tooltip element -->
+        <button id="nleftTooltip">Show Tooltip</button>
+    </div>
+
+    <div class="layout">
+        <b>Right Tooltip</b>
+        <!-- Tooltip element -->
+        <button id="nrightTooltip">Show Tooltip</button>
+    </div>
+
+
+    <script type="text/javascript">
+        var button = new ej.buttons.Button();
+        button.appendTo('#bottomTooltip');
+
+        //Initialize Tooltip component
+        var tooltip = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Bottom !!!',
+            isSticky: true,
+            position:"BottomCenter"
+        });
+        tooltip.appendTo('#bottomTooltip');
+        
+        var button1 = new ej.buttons.Button();
+        button1.appendTo('#topTooltip');
+        //Initialize Tooltip component
+        var tooltip1 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Top !!!',
+            isSticky: true,
+            position:"TopCenter"
+        });
+
+        //Render initialized Tooltip component
+        tooltip1.appendTo('#topTooltip');
+        //tooltip1.open();
+
+        var button2 = new ej.buttons.Button();
+        button2.appendTo('#leftTooltip');
+        //Initialize Tooltip component
+        var tooltip2 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Left !!!',
+            isSticky: true,
+            position:"LeftCenter"
+        });
+
+        //Render initialized Tooltip component
+        tooltip2.appendTo('#leftTooltip');
+
+        var button3 = new ej.buttons.Button();
+        button3.appendTo('#rightTooltip');
+        //Initialize Tooltip component
+        var tooltip3 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Right !!!',
+            isSticky: true,
+            position:"RightCenter"
+        });
+
+        //Render initialized Tooltip component
+        tooltip3.appendTo('#rightTooltip');
+
+
+        var button0 = new ej.buttons.Button();
+        button0.appendTo('#nbottomTooltip');
+
+        //Initialize Tooltip component
+        var tooltip10 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Bottom !!!',
+            position:"BottomCenter",
+            opensOn:"Click"
+        });
+        tooltip10.appendTo('#nbottomTooltip');
+        
+        var button11 = new ej.buttons.Button();
+        button11.appendTo('#ntopTooltip');
+        //Initialize Tooltip component
+        var tooltip11 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Top !!!',
+            position:"TopCenter",
+            opensOn:"Click"
+        });
+
+        //Render initialized Tooltip component
+        tooltip11.appendTo('#ntopTooltip');
+        //tooltip1.open();
+
+        var button12 = new ej.buttons.Button();
+        button12.appendTo('#nleftTooltip');
+        //Initialize Tooltip component
+        var tooltip12 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Left !!!',
+            position:"LeftCenter",
+            opensOn:"Click"
+        });
+
+        //Render initialized Tooltip component
+        tooltip12.appendTo('#nleftTooltip');
+
+        var button13 = new ej.buttons.Button();
+        button13.appendTo('#nrightTooltip');
+        //Initialize Tooltip component
+        var tooltip13 = new ej.popups.Tooltip({
+            //Set tooltip content
+            content: 'Tooltip Right !!!',
+            position:"RightCenter",
+            opensOn:"Click"
+        });
+
+        //Render initialized Tooltip component
+        tooltip13.appendTo('#nrightTooltip');
+    </script>
+    <style>
+        .layout {
+            width: 300px;
+            height: 100px;
+            display: inline-block;
+            margin-top: 50px; 
+        }
+    </style>
+</body>
+</html>

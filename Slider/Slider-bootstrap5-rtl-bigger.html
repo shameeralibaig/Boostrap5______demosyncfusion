@@ -1,0 +1,268 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Essential JS 2 :Slider</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/bootstrap5-base.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap5-button.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap5.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap5-popups.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdn.syncfusion.com/ej2/bootstrap.css" rel="stylesheet"> -->
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    </title>
+</head>
+
+<body class="e-bigger">
+    <div class="col-lg-8 control-section">
+        <div class="content-wrapper">
+    <div class="layout">
+        <b>Default Slider</b>
+        <!-- Add the HTML <div> element  -->
+        <div id='element'></div>
+    </div>
+    <div class="layout">
+        <b>Min range Slider</b>
+        <!-- Add the HTML <div> element  -->
+        <div id='minrangeslider'></div>
+    </div>
+
+    <div class="layout">
+        <b>Range Slider</b>
+        <div id='range'></div>
+    </div>
+    <div class="layout">
+        <b>Ticks Slider</b>
+        <div id='ticks'></div>
+    </div>
+
+    <div class="layout">
+        <b>Ticks Slider</b>
+        <div id='ticks1'></div>
+    </div>
+
+    <div class="layout">
+        <b>Ticks Range Slider</b>
+        <div id='ticksrange'></div>
+    </div>
+    <div class="layout">
+        <b>Tooltip default Slider</b>
+        <div id='tooltipSlider'></div>
+    </div>
+
+    <div class="layout">
+        <b>Tooltip range Slider</b>
+        <div id='tooltiprangeSlider'></div>
+    </div>
+    <div class="layout">
+        <b>Tooltip default limit Slider</b>
+        <div id='defaultlimit'></div>
+    </div>
+    <div class="layout">
+        <b>Tooltip default limit Slider</b>
+        <div id='rangelimit'></div>
+    </div>
+    <div class="layout1">
+        <div id='verticaldefault'></div>
+    </div>
+    <div class="layout1">
+        <div id='verticalminrange'></div>
+    </div>
+    <div class="layout1">
+        <div id='verticalrange'></div>
+    </div>
+    <div class="layout1">
+        <b>Vertical Ticks Slider</b>
+        <div id='verticalticks'></div>
+    </div>
+    <div class="layout1">
+        <b>Tooltip limit Slider</b>
+        <div id='vvrangelimit'></div>
+    </div>
+    <div class="layout1">
+        <b>Tooltip range limit Slider</b>
+        <div id='vrangelimit'></div>
+    </div>
+    <div class="layout1">
+        <b>Tooltip range limit Slider</b>
+        <div id='disabledrangelimit'></div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        // Initialize Essential JS 2 JavaScript Slider control
+        var sliderInstance = new ej.inputs.Slider();
+        //Render initialized Slider
+        sliderInstance.appendTo("#element");
+
+        // Initialization of Slider
+        var slider = new ej.inputs.Slider({
+            value: 30,
+            type: 'MinRange'
+        });
+        // Render initialized Slider
+        slider.appendTo('#minrangeslider');
+
+        var rangeObj = new ej.inputs.Slider({
+            value: [30, 70],
+            type: 'Range',
+            enableRtl:true
+        });
+        rangeObj.appendTo('#range');
+
+        var defaultObj1 = new ej.inputs.Slider({
+            min: 10,
+            value: 30,
+            max: 100,
+            step: 5,
+            ticks: { placement: 'Both', largeStep: 20, smallStep: 5, showSmallTicks: true },
+            enableRtl:true
+        });
+        defaultObj1.appendTo('#ticks');
+        var defaultObj123 = new ej.inputs.Slider({
+            min: 10,
+            value: 30,
+            max: 100,
+            step: 5,
+            ticks: { placement: 'Before', largeStep: 20, smallStep: 5, showSmallTicks: true },
+            enableRtl:true
+        });
+        defaultObj123.appendTo('#ticks1');
+        var rangeObj1 = new ej.inputs.Slider({
+            min: 0,
+            max: 100,
+            value: [30, 70],
+            step: 5,
+            type: 'Range',
+            ticks: { placement: 'After', largeStep: 20, smallStep: 5, showSmallTicks: true },
+            enableRtl:true
+        });
+        rangeObj1.appendTo('#ticksrange');
+
+        var defaultObj2 = new ej.inputs.Slider({
+            value: 30,
+            showButtons: true,
+            tooltip: { placement: 'Before', isVisible: true, showOn: 'Always' },
+            enableRtl:true
+        });
+        defaultObj2.appendTo('#tooltipSlider');
+        var rangeObj2 = new ej.inputs.Slider({
+            value: [30, 70],
+            type: 'Range',
+            showButtons: true,
+            tooltip: { placement: 'Before', isVisible: true, showOn: 'Always' },
+            enableRtl:true
+        });
+        rangeObj2.appendTo('#tooltiprangeSlider');
+
+        var minRangeObj = new ej.inputs.Slider({
+        min: 0,
+        value: 25,
+        max: 100,
+        type: 'MinRange',
+        ticks: { placement: 'Both', largeStep: 20, smallStep: 5, showSmallTicks: true },
+        tooltip: { isVisible: true, placement: 'Before' },
+        limits: { enabled: true, minStart: 10, minEnd: 40 },
+        enableRtl:true
+    });
+    minRangeObj.appendTo('#defaultlimit');
+    var rangeObj = new ej.inputs.Slider({
+        min: 0,
+        value: [25, 75],
+        max: 100,
+        type: 'Range',
+        ticks: { placement: 'After', largeStep: 20, smallStep: 5, showSmallTicks: true },
+        tooltip: { isVisible: true, placement: 'Before' },
+        limits: { enabled: true, minStart: 10, minEnd: 40, maxStart: 60, maxEnd: 90 },
+        enableRtl:true
+    });
+    rangeObj.appendTo('#rangelimit');
+
+    var rangeObj1234 = new ej.inputs.Slider({
+        min: 0,
+        value: [25, 75],
+        max: 100,
+        type: 'Range',
+        ticks: { placement: 'Before', largeStep: 20, smallStep: 5, showSmallTicks: true },
+        tooltip: { isVisible: true, placement: 'Before' },
+        limits: { enabled: true, minStart: 10, minEnd: 40, maxStart: 60, maxEnd: 90 },
+        orientation: 'Vertical',
+        enableRtl:true
+    });
+    rangeObj1234.appendTo('#vvrangelimit');
+
+    var rangeObj1234 = new ej.inputs.Slider({
+        min: 0,
+        value: [25, 75],
+        max: 100,
+        type: 'Range',
+        ticks: { placement: 'After', largeStep: 20, smallStep: 5, showSmallTicks: true },
+        tooltip: { isVisible: true, placement: 'Before' },
+        limits: { enabled: true, minStart: 10, minEnd: 40, maxStart: 60, maxEnd: 90 },
+        orientation: 'Vertical',
+        enableRtl:true
+    });
+    rangeObj1234.appendTo('#vrangelimit');
+    var rangeObj1234 = new ej.inputs.Slider({
+        min: 0,
+        value: [25, 75],
+        max: 100,
+        type: 'Range',
+        ticks: { placement: 'After', largeStep: 20, smallStep: 5, showSmallTicks: true },
+        tooltip: { isVisible: true, placement: 'Before' },
+        limits: { enabled: true, minStart: 10, minEnd: 40, maxStart: 60, maxEnd: 90 },
+        orientation: 'Vertical',
+        enabled: false,
+        enableRtl:true
+    });
+    rangeObj1234.appendTo('#disabledrangelimit');
+
+    var defaultObjv = new ej.inputs.Slider({
+        value: 30,
+        orientation: 'Vertical',
+        enableRtl:true
+    });
+    defaultObjv.appendTo('#verticaldefault');
+    var minRangeObjv = new ej.inputs.Slider({
+        value: 30,
+        type: 'MinRange',
+        orientation: 'Vertical',
+        enableRtl:true
+    });
+    minRangeObjv.appendTo('#verticalminrange');
+    var rangeObjv = new ej.inputs.Slider({
+        value: [30, 70],
+        type: 'Range',
+        orientation: 'Vertical',
+        enableRtl:true
+    });
+    rangeObjv.appendTo('#verticalrange');
+    var defaultObj1v = new ej.inputs.Slider({
+            min: 0,
+            value: 30,
+            max: 100,
+            step: 5,
+            ticks: { placement: 'Both', largeStep: 20, smallStep: 5, showSmallTicks: true },
+            orientation: 'Vertical',
+            tooltip: { isVisible: true, placement: 'Before' },
+            showButtons: true,
+            enableRtl:true
+        });
+        defaultObj1v.appendTo('#verticalticks');
+    
+    </script>
+    <style>
+        .layout {
+            height: 100px;
+            margin-top: 50px;
+        }
+
+        .layout1 {
+            margin-top: 50px;
+            display:inline-block;
+        }
+
+    </style>
+</body>
+
+</html>
