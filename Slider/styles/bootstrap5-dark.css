@@ -4817,13 +4817,13 @@ input.e-input::-webkit-input-placeholder {
 .e-bigger .e-control-wrapper.e-slider-container.e-horizontal .e-tick-before.e-scale.e-h-scale .e-tick,
 .e-control-wrapper.e-slider-container.e-bigger.e-horizontal .e-tick-before.e-scale.e-h-scale .e-tick {
   height: 8px;
-  top: -11px;
+  top: -12px;
 }
 
 .e-bigger .e-control-wrapper.e-slider-container.e-horizontal .e-tick-before.e-scale.e-h-scale .e-large,
 .e-control-wrapper.e-slider-container.e-bigger.e-horizontal .e-tick-before.e-scale.e-h-scale .e-large {
   height: 12px;
-  top: -11px;
+  top: -12px;
 }
 
 .e-bigger .e-control-wrapper.e-slider-container.e-horizontal .e-tick-after.e-scale.e-h-scale .e-tick,
@@ -5076,6 +5076,7 @@ input.e-input::-webkit-input-placeholder {
   padding: 38px 0;
   width: 48px;
   padding: 30px 0;
+  padding: 28px 0;
 }
 
 .e-control-wrapper.e-slider-container.e-vertical .e-slider {
@@ -5198,8 +5199,8 @@ input.e-input::-webkit-input-placeholder {
 }
 
 .e-control-wrapper.e-slider-container .e-slider .e-handle.e-tab-handle {
-  background-color: #0b5ed7;
-  border: 1px solid #fff;
+  background-color: #0a58ca;
+  border: 1px solid #212529;
   box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.4);
 }
 
@@ -5420,12 +5421,22 @@ input.e-input::-webkit-input-placeholder {
   border-color: transparent;
 }
 
+.e-control-wrapper.e-slider-container .e-slider .e-handle:hover {
+  background-color: #0b5ed7;
+  border: 1px solid #0a58ca;
+}
+
+.e-control-wrapper.e-slider-container .e-slider .e-handle:active {
+  background-color: #0b5ed7;
+  border: 1px solid #0a58ca;
+}
+
 .e-control-wrapper.e-slider-container.e-slider-hover .e-slider-track {
   background-color: #343a40;
 }
 
 .e-control-wrapper.e-slider-container.e-slider-hover .e-range {
-  background-color: #0b5ed7;
+  background-color: #0d6efd;
 }
 
 .e-control-wrapper.e-slider-container.e-slider-hover .e-handle {
@@ -5433,12 +5444,16 @@ input.e-input::-webkit-input-placeholder {
 }
 
 .e-control-wrapper.e-slider-container.e-disabled .e-slider .e-range {
-  background: #343a40;
+  background: #495057;
 }
 
 .e-control-wrapper.e-slider-container.e-disabled .e-slider .e-handle {
+  background: #495057;
+  border-color: #495057;
+}
+
+.e-control-wrapper.e-slider-container.e-disabled .e-slider .e-slider-track {
   background: #343a40;
-  border-color: #343a40;
 }
 
 @keyframes material-spinner-rotate {
