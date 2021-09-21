@@ -729,15 +729,15 @@
 }
 
 .e-tooltip-wrap .e-tooltip-close {
-  background-color: #eee;
-  border-color: transparent;
+  background-color: #303030;
+  border-color: #eee;
   border-radius: 8px;
-  color: #fff;
+  color: #eee;
 }
 
 .e-tooltip-wrap .e-tooltip-close:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #303030;
+  background-color: #303030;
+  color: #bdbdbd;
 }
 
 .e-tooltip-wrap .e-tip-content {
