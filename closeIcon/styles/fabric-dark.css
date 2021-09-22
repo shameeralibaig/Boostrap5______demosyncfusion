@@ -729,9 +729,9 @@
 
 .e-tooltip-wrap .e-tooltip-close {
   background-color: #414040;
-  border-color: #9a9a9a;
+  border-color: #414040;
   border-radius: 8px;
-  color: #000;
+  color: #f4f4f4;
 }
 
 .e-tooltip-wrap .e-tooltip-close:hover {
